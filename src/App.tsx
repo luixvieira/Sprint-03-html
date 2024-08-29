@@ -1,17 +1,14 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
-import HomePage from './pages/HomePage';
-import DiagnosticoPage from './pages/DiagnosticoPage';
-import ReservaDePecasPage from './pages/ReservaDePecasPage';
+import { Route, Routes } from 'react-router-dom';
+import { default as HomePage, default as PreDiagnosticoPage } from './pages/PreDiagnosticoPage';
 
-function App() {
+const App: React.FC = () => {
   return (
     <Routes>
       <Route path="/" element={<HomePage />} />
-      <Route path="/diagnostico" element={<DiagnosticoPage />} />
-      <Route path="/reserva-de-pecas" element={<ReservaDePecasPage />} />
+      <Route path="/pre-diagnostico" element={<PreDiagnosticoPage />} />
     </Routes>
   );
-}
+};
 
 export default App;
